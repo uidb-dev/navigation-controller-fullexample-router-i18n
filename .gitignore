@@ -30,5 +30,5 @@ www/
 build/
 
 
-.git-private
-.git-public
+.git-private/*
+.git-public/*
