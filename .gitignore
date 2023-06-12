@@ -28,3 +28,7 @@ package-lock.json
 
 www/
 build/
+
+
+.git-private
+.git-public
