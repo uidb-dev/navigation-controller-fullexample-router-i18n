@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[lfs]
+	repositoryformatversion = 0
+[remote "origin"]
+	url = https://github.com/uidb-dev/navigation-controller-fullexample.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "production"]
+	remote = origin
+	merge = refs/heads/production
