@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navigator from "navigation-controller";
-import ColoredLinearProgress from "../../components/common/LineProgress";
+// import ColoredLinearProgress from "../../components/common/LineProgress";
 
 // Import all routes
 import {
@@ -119,8 +119,8 @@ const UseNavigator = (props) => {
     activePageKey,
     navigatorRef,
     backgroundColor: "#fff",
-    transitionIn: i18n.dir() === "ltr" ? "fadeInRight" : "fadeInLeft",
-    transitionOut: i18n.dir() === "ltr" ? "fadeOutRight" : "fadeOutLeft",
+    transitionIn: i18n.dir() === "ltr" ? "slideInRight" : "slideInLeft",
+    transitionOut: i18n.dir() === "ltr" ? "slideOutRight" : "slideOutLeft",
     history,
     id,
     query: query,
@@ -163,14 +163,14 @@ const UseNavigator = (props) => {
 
   return (
     <React.Fragment>
-      {// activePageKey !== navigatorRef?.nowPage ||
-      showLinearProgress 
-      && false // remove to use showLinearProgress
-      && <ColoredLinearProgress />
+      {
+        // activePageKey !== navigatorRef?.nowPage ||
+        showLinearProgress && false // remove to use showLinearProgress
+        // && <ColoredLinearProgress />
       }
       {routesWithoutPatern
         .concat(routesWithPatern)
-        .find((x) => x.key && x.key === activePageKey) === undefined  ? (
+        .find((x) => x.key && x.key === activePageKey) === undefined ? (
         <Redirect to={`/${errorPageKey}`} />
       ) : (
         <div className={i18n.dir()}>

@@ -1,5 +1,4 @@
-import React, { Component, Suspense } from "react";
-
+import React, { Component } from "react";
 
 /* Bootstarp */
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,7 +10,7 @@ import "./assets/styles/rtl.scss";
 import "./assets/styles/ltr.scss";
 
 // # Style for example poject
-import './App.css'
+import "./App.css";
 
 //
 // import ReactGA from "react-ga4";
@@ -43,7 +42,6 @@ class App extends Component {
     // Google Analytics
     if (this.props.isProduction) {
       // ReactGA.initialize(process.env.REACT_APP_GA);
-
       // hotjar.initialize(
       //   process.env.REACT_APP_hotjar_hjid,
       //   process.env.REACT_APP_hotjar_hjsv
@@ -59,7 +57,6 @@ class App extends Component {
   // };
 
   render() {
-
     return (
       <React.Fragment>
         {/* Splash */}
@@ -77,9 +74,9 @@ class App extends Component {
              </div>
           }
         > */}
-          <main>
-            <UseNavigator app={this} {...this.props} />
-          </main>
+        <main>
+          <UseNavigator app={this} {...this.props} />
+        </main>
         {/* </Suspense> */}
       </React.Fragment>
     );
